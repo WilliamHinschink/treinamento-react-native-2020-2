@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FlatList, Text, View, ActivityIndicator } from "react-native";
 import { PlaylistCard } from "../components/playslist-card.components";
-import { PlaylistMock } from "../mock/playlist.mock";
+import { PlaylistMock } from "../../mock/playlist.mock";
 
 export const HomeScreen = () => {
     const  [isLoading, setIsLoading] = useState(true);

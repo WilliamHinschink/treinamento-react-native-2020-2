@@ -24,7 +24,15 @@ const Info = () => {
 }
 
 const SoundBar = () => {
-    return <View/>
+    return (
+        <View style={styles.textContainer}>
+            <View style={styles.titleContainer}>
+                <Text style={styles.title}>Zumba Class</Text>
+                <Text style={styles.description}>1:00 | 3:00</Text>
+            </View>
+            <Text>Dancing School</Text>
+        </View>
+    )
 }
 
 const Buttons = () => {

@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     statusBar: {
         width,
         height: 5,
-        backgroundColor: '#3F25E5'
+        backgroundColor: '#000'
     },
     mediaContainer: {
         flex: 1,
