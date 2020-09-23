@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FlatList, Text, View, ActivityIndicator } from "react-native";
-import { PlaylistCard } from "../components/playslist-card.components";
-import { PlaylistMock } from "../../mock/playlist.mock";
+import { PlaylistCard } from "../../components";
+import { PlaylistMock } from "../../../services/mock/playlist.mock";
 
 export const HomeScreen = () => {
     const  [isLoading, setIsLoading] = useState(true);
@@ -9,7 +9,7 @@ export const HomeScreen = () => {
         setTimeout(() => {
             setIsLoading(false)
         }, 1000)
-    })
+    });
 
     const renderItem = ({item}) => {
         const {imageUrl, title} = item;
@@ -30,7 +30,7 @@ export const HomeScreen = () => {
                 flex: 1,
                 backgroundColor: 'white',
                 paddingTop: 20,
-                paddingHorizontal: 30
+                paddingHorizontal: 20
             }}>
                 <Text style={{
                     fontWeight: 'bold',
@@ -42,14 +42,13 @@ export const HomeScreen = () => {
                 <FlatList
                     data={PlaylistMock.data}
                     keyExtractor={(item) => {
-                        item.id
+                        item.id.toString()
                     }}
                     renderItem={renderItem}
-                    contentContainerStyle={{paddingHorizontal: 20}}
                 />
             </View>
         )
-    }
+    };
 
     const Loader = () => {
         return (
@@ -57,7 +56,7 @@ export const HomeScreen = () => {
                 <ActivityIndicator color={'purple'} size={'large'} />
             </View>
         )
-    }
+    };
 
     return isLoading ? <Loader /> : <Content />;
-}
+};

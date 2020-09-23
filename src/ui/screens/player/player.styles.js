@@ -5,7 +5,6 @@ const {width, height} = Dimensions.get('window');
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFFFFF',
         alignItems: 'center',
         flexDirection: 'column'
     },
@@ -16,7 +15,17 @@ export const styles = StyleSheet.create({
     statusBar: {
         width,
         height: 5,
-        backgroundColor: '#000'
+        backgroundColor: '#3F25E5'
+    },
+    soundBarContainer: {
+        width,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingHorizontal: 27
+    },
+    soundBarSlider: {
+        flex: 1,
     },
     mediaContainer: {
         flex: 1,
@@ -48,7 +57,7 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 27,
         justifyContent: 'space-between'
     },
-    toucheble: {
+    touchable: {
         backgroundColor: 'rgba(63, 37, 229, 0.15)',
         width: width * 0.15,
         height: width * 0.15,

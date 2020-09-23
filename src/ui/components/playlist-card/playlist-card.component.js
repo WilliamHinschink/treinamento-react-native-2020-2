@@ -1,6 +1,6 @@
 import React from 'react';
 import { Platform, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import { ArrowIcon } from '../../assets/icons/arrow.icon'
+import { ArrowIcon } from '../../../assets/icons/arrow.icon'
 
 const getRandomColor = () => {
     var letters = '0123456789ABCDEF';
@@ -9,7 +9,7 @@ const getRandomColor = () => {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
-}
+};
 
 export const PlaylistCard = ({ image, title, duration, quantity }) => {
     return (
